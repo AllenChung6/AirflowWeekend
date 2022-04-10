@@ -19,10 +19,11 @@ with DAG(
         start_date=datetime(2022, 4, 10),
         template_searchpath='/Users/allenc/PyCharmProjects/AirflowWeekend/airflow-proj-files/',
         catchup=False
-) as Nutrition_run:
+) as dag_1:
     notebook_task = PapermillOperator(
         task_id="run_Nutritional_Facts.ipynb",
         input_nb="airflow-proj-files/Nutritional_Facts.ipynb",
         output_nb="airflow-proj-files/out-{{ execution_date }}.ipynb",
         parameters={"execution_date": "{{ execution_date }}"},
     )
+
