@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 
 from airflow import DAG
 from airflow.providers.papermill.operators.papermill import PapermillOperator
+# pip install "apache-airflow[celery]==2.2.5"
 
 default_args = {
     'owner': 'airflow',
