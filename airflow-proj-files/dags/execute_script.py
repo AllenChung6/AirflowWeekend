@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import matplotlib
 
 
 def nutrition_script():
@@ -40,3 +41,5 @@ def nutrition_script():
     # Calories = data3.sort_values(by=['Calories'], ascending=False)
     # Sort foods by the amount of Protein from High to low
     # Protein = data3.sort_values(by=['Protein(g)'], ascending=False)
+
+

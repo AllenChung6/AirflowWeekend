@@ -13,10 +13,11 @@ default_args = {
     'start_date': datetime.today() - timedelta(days=1)
 }
 
-with DAG('nutrition_dag', start_date=datetime(2022, 5, 4),
+with DAG('nutrition_dag', start_date=datetime(2022, 1, 1),
          schedule_interval='@once',
          catchup=False,
          default_args=default_args) as dag:
+
     task = PythonOperator(
         task_id="execute_script",
         python_callable=nutrition_script,
