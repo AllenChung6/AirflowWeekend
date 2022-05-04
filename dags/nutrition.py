@@ -6,10 +6,7 @@ from execute_script import nutrition_script
 # pip install "apache-airflow[celery]==2.2.5"
 
 default_args = {
-    'owner': 'airflow',
-    'depends_on_past': False,
-    'email_on_failure': False,
-    'email_on_retry': False,
+    'owners': 'airflow',
     'start_date': datetime.today() - timedelta(days=1)
 }
 
